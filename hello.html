@@ -14,8 +14,39 @@
     if (window.location.hash.indexOf("#") != -1) {
         // Your code in here accessing the string like this
         // location.href.substr(location.href.indexOf("#"))
-        alert('fpound');
+       
+ var values = window.location.hash.split('#');
+ var newValues = values[1].split('&');
+ 
+ 
+ var userid= '';
+ var accesstoken ='';
+ var authtoken ='';
+ 
+ for ( i = 0; i<newValues.length; i++){ 
+ //console.log(newValues[i]);
 
+ var innerValue = newValues[i].split('=');
+ if(innerValue[0] === 'access_token')
+ {
+  accesstoken = innerValue[1];
+ // console.log(innerValue[1]);
+ };
+ 
+ if(innerValue[0] === 'user_id')
+ {
+ userid = innerValue[1];
+ //console.log(innerValue[1]);
+ };
+  if(innerValue[0] === 'authentication_token')
+ {
+  authtoken = innerValue[1];
+//  console.log(innerValue[1]);
+ };
+ };
+ 
+ 
+ alert(userid);
 
     } else {
 
