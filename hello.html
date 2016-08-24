@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Hello world
+</body>
+</html>
+
+<script type="text/javascript">
+    if (window.location.hash.indexOf("#") != -1) {
+        // Your code in here accessing the string like this
+        // location.href.substr(location.href.indexOf("#"))
+        alert('fpound');
+
+
+    } else {
+
+        var Value = "https://login.live.com/oauth20_authorize.srf?client_id=a8c3cde5-079e-432f-8a45-d109b5129ab0&redirect_uri=" + "" + "&response_type=token&scope=wl.emails,wl.basic&state=ticket";
+
+       // var googleurl = 'http://www.google.com';
+        window.location.href = Value;
+    }
+</script>
